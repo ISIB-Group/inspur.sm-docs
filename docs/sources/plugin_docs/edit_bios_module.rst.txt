@@ -75,7 +75,8 @@ Parameters
                                 <td>
                                                                                                                                                             </td>
                                                                 <td>
-                                            <div>BIOS setup option,Required when <em>file_url=None</em>.</div>
+                                            <div>BIOS setup option.</div>
+                                            <div>Required when <em>file_url=None</em>.</div>
                                                         </td>
             </tr>
                                 <tr>
@@ -215,7 +216,8 @@ Parameters
                                 <td>
                                                                                                                                                             </td>
                                                                 <td>
-                                            <div>BIOS setup option value,Required when <em>file_url=None</em>.</div>
+                                            <div>BIOS setup option value.</div>
+                                            <div>Required when <em>file_url=None</em>.</div>
                                                         </td>
             </tr>
                         </table>
@@ -237,8 +239,6 @@ Examples
     
     - name: Bios test
       hosts: ism
-      collections:
-        - inspur.sm
       connection: local
       gather_facts: no
       vars:
@@ -250,13 +250,13 @@ Examples
       tasks:
 
       - name: "Set bios setup"
-        edit_bios:
+        inspur.sm.edit_bios:
           attribute: "VMX"
           value: "Disable"
           provider: "{{ ism }}"
 
       - name: "Set bios setup"
-        edit_bios:
+        inspur.sm.edit_bios:
           attribute: "VMX"
           value: "Enable"
           provider: "{{ ism }}"
