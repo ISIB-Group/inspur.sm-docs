@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>inspur.sm.auto_capture_info – Get auto capture screen information. &mdash; inspur.sm 1.0.1 documentation</title>
+  <title>inspur.sm.edit_smtp_dest – Set SMTP information. &mdash; inspur.sm 1.0.1 documentation</title>
   
 
   
@@ -82,7 +82,7 @@
             
               <!-- Local TOC -->
               <div class="local-toc"><ul>
-<li><a class="reference internal" href="#">inspur.sm.auto_capture_info – Get auto capture screen information.</a><ul>
+<li><a class="reference internal" href="#">inspur.sm.edit_smtp_dest – Set SMTP information.</a><ul>
 <li><a class="reference internal" href="#synopsis">Synopsis</a></li>
 <li><a class="reference internal" href="#parameters">Parameters</a></li>
 <li><a class="reference internal" href="#examples">Examples</a></li>
@@ -138,13 +138,13 @@
     
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>inspur.sm.auto_capture_info – Get auto capture screen information.</li>
+      <li>inspur.sm.edit_smtp_dest – Set SMTP information.</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../sources/plugin_docs/auto_capture_info_module.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../sources/plugin_docs/edit_smtp_dest_module.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -157,16 +157,16 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <span class="target" id="ansible-collections-inspur-sm-auto-capture-info-module"></span><div class="section" id="inspur-sm-auto-capture-info-get-auto-capture-screen-information">
-<h1>inspur.sm.auto_capture_info – Get auto capture screen information.<a class="headerlink" href="#inspur-sm-auto-capture-info-get-auto-capture-screen-information" title="Permalink to this headline">¶</a></h1>
+  <span class="target" id="ansible-collections-inspur-sm-edit-smtp-dest-module"></span><div class="section" id="inspur-sm-edit-smtp-dest-set-smtp-information">
+<h1>inspur.sm.edit_smtp_dest – Set SMTP information.<a class="headerlink" href="#inspur-sm-edit-smtp-dest-set-smtp-information" title="Permalink to this headline">¶</a></h1>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This plugin is part of the <a class="reference external" href="https://galaxy.ansible.com/inspur/sm">inspur.sm collection</a>.</p>
 <p>To install it use: <code class="code docutils literal notranslate"><span class="pre">ansible-galaxy</span> <span class="pre">collection</span> <span class="pre">install</span> <span class="pre">inspur.sm</span></code>.</p>
-<p>To use it in a playbook, specify: <code class="code docutils literal notranslate"><span class="pre">inspur.sm.auto_capture_info</span></code>.</p>
+<p>To use it in a playbook, specify: <code class="code docutils literal notranslate"><span class="pre">inspur.sm.edit_smtp_dest</span></code>.</p>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified added">New in version 0.1.0: </span>of inspur.sm</p>
+<p><span class="versionmodified added">New in version 1.2.0: </span>of inspur.sm</p>
 </div>
 <div class="contents local topic" id="contents">
 <ul class="simple">
@@ -179,7 +179,8 @@
 <div class="section" id="synopsis">
 <h2><a class="toc-backref" href="#id1">Synopsis</a><a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>Get auto capture screen information on Inspur server.</p></li>
+<li><p>Set SMTP dest information on Inspur server.</p></li>
+<li><p>Only the M6 models support this feature.</p></li>
 </ul>
 </div>
 <div class="section" id="parameters">
@@ -192,6 +193,36 @@
     </tr>
                 <tr>
                                                             <td colspan="2">
+                <div class="ansibleOptionAnchor" id="parameter-address"></div>
+                <b>address</b>
+                <a class="ansibleOptionLink" href="#parameter-address" title="Permalink to this option"></a>
+                <div style="font-size: small">
+                    <span style="color: purple">string</span>
+                                                                </div>
+                                                    </td>
+                            <td>
+                                                                                                                                                        </td>
+                                                            <td>
+                                        <div>Email address.</div>
+                                                    </td>
+        </tr>
+                            <tr>
+                                                            <td colspan="2">
+                <div class="ansibleOptionAnchor" id="parameter-description"></div>
+                <b>description</b>
+                <a class="ansibleOptionLink" href="#parameter-description" title="Permalink to this option"></a>
+                <div style="font-size: small">
+                    <span style="color: purple">string</span>
+                                                                </div>
+                                                    </td>
+                            <td>
+                                                                                                                                                        </td>
+                                                            <td>
+                                        <div>Description information.</div>
+                                                    </td>
+        </tr>
+                            <tr>
+                                                            <td colspan="2">
                 <div class="ansibleOptionAnchor" id="parameter-host"></div>
                 <b>host</b>
                 <a class="ansibleOptionLink" href="#parameter-host" title="Permalink to this option"></a>
@@ -203,6 +234,27 @@
                                                                                                                                                         </td>
                                                             <td>
                                         <div>Specifies the DNS host name or address for connecting to the remote device over the specified transport.  The value of host is used as the destination address for the transport.</div>
+                                                    </td>
+        </tr>
+                            <tr>
+                                                            <td colspan="2">
+                <div class="ansibleOptionAnchor" id="parameter-id"></div>
+                <b>id</b>
+                <a class="ansibleOptionLink" href="#parameter-id" title="Permalink to this option"></a>
+                <div style="font-size: small">
+                    <span style="color: purple">integer</span>
+                                             / <span style="color: red">required</span>                    </div>
+                                                    </td>
+                            <td>
+                                                                                                                        <ul style="margin: 0; padding: 0"><b>Choices:</b>
+                                                                                                                                                            <li>1</li>
+                                                                                                                                                                                            <li>2</li>
+                                                                                                                                                                                            <li>3</li>
+                                                                                                                                                                                            <li>4</li>
+                                                                                </ul>
+                                                                        </td>
+                                                            <td>
+                                        <div>Email destination id.</div>
                                                     </td>
         </tr>
                             <tr>
@@ -286,6 +338,25 @@
 
                             <tr>
                                                             <td colspan="2">
+                <div class="ansibleOptionAnchor" id="parameter-status"></div>
+                <b>status</b>
+                <a class="ansibleOptionLink" href="#parameter-status" title="Permalink to this option"></a>
+                <div style="font-size: small">
+                    <span style="color: purple">string</span>
+                                                                </div>
+                                                    </td>
+                            <td>
+                                                                                                                        <ul style="margin: 0; padding: 0"><b>Choices:</b>
+                                                                                                                                                            <li>enable</li>
+                                                                                                                                                                                            <li>disable</li>
+                                                                                </ul>
+                                                                        </td>
+                                                            <td>
+                                        <div>Email enable.</div>
+                                                    </td>
+        </tr>
+                            <tr>
+                                                            <td colspan="2">
                 <div class="ansibleOptionAnchor" id="parameter-username"></div>
                 <b>username</b>
                 <a class="ansibleOptionLink" href="#parameter-username" title="Permalink to this option"></a>
@@ -303,7 +374,7 @@
 <br/></div>
 <div class="section" id="examples">
 <h2><a class="toc-backref" href="#id3">Examples</a><a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-yaml+jinja notranslate"><div class="highlight"><pre><span></span><span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Screen test</span>
+<div class="highlight-yaml+jinja notranslate"><div class="highlight"><pre><span></span><span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Smtp  dest test</span>
   <span class="nt">hosts</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">ism</span>
   <span class="nt">connection</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">local</span>
   <span class="nt">gather_facts</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">no</span>
@@ -315,8 +386,18 @@
 
   <span class="nt">tasks</span><span class="p">:</span>
 
-  <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="s">&quot;Get</span><span class="nv"> </span><span class="s">auto</span><span class="nv"> </span><span class="s">capture</span><span class="nv"> </span><span class="s">screen</span><span class="nv"> </span><span class="s">information&quot;</span>
-    <span class="nt">inspur.sm.auto_capture_info</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="s">&quot;Set</span><span class="nv"> </span><span class="s">smtp</span><span class="nv"> </span><span class="s">dest</span><span class="nv"> </span><span class="s">information&quot;</span>
+    <span class="nt">inspur.sm.edit_smtp_dest</span><span class="p">:</span>
+      <span class="nt">id</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+      <span class="nt">status</span><span class="p">:</span> <span class="s">&quot;disable&quot;</span>
+      <span class="nt">provider</span><span class="p">:</span> <span class="s">&quot;</span><span class="cp">{{</span> <span class="nv">ism</span> <span class="cp">}}</span><span class="s">&quot;</span>
+
+  <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="s">&quot;Set</span><span class="nv"> </span><span class="s">smtp</span><span class="nv"> </span><span class="s">dest</span><span class="nv"> </span><span class="s">information&quot;</span>
+    <span class="nt">inspur.sm.edit_smtp_dest</span><span class="p">:</span>
+      <span class="nt">id</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+      <span class="nt">status</span><span class="p">:</span> <span class="s">&quot;enable&quot;</span>
+      <span class="nt">address</span><span class="p">:</span> <span class="s">&quot;100.2.2.2&quot;</span>
+      <span class="l l-Scalar l-Scalar-Plain">description&quot;</span><span class="p p-Indicator">:</span> <span class="s">&quot;test&quot;</span>
       <span class="nt">provider</span><span class="p">:</span> <span class="s">&quot;</span><span class="cp">{{</span> <span class="nv">ism</span> <span class="cp">}}</span><span class="s">&quot;</span>
 </pre></div>
 </div>

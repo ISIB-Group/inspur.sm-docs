@@ -80,21 +80,20 @@
               
             
             
-              <p class="caption"><span class="caption-text">Getting Started</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../quickstart.html">Quickstart</a></li>
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">inspur.sm.user – Manage user.</a><ul>
+<li><a class="reference internal" href="#synopsis">Synopsis</a></li>
+<li><a class="reference internal" href="#parameters">Parameters</a></li>
+<li><a class="reference internal" href="#examples">Examples</a></li>
+<li><a class="reference internal" href="#return-values">Return Values</a><ul>
+<li><a class="reference internal" href="#authors">Authors</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Requirements</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../requirements.html">Requirements</a></li>
+</li>
 </ul>
-<p class="caption"><span class="caption-text">Appendices</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../release_notes.html">Releases</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../release_notes.html#id1">Releases</a></li>
+</li>
 </ul>
-
+</div>
             
           
         </div>
@@ -392,6 +391,7 @@
 <h2><a class="toc-backref" href="#id3">Examples</a><a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-yaml+jinja notranslate"><div class="highlight"><pre><span></span><span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">User test</span>
   <span class="nt">hosts</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">ism</span>
+  <span class="nt">no_log</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
   <span class="nt">connection</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">local</span>
   <span class="nt">gather_facts</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">no</span>
   <span class="nt">vars</span><span class="p">:</span>
@@ -403,7 +403,7 @@
   <span class="nt">tasks</span><span class="p">:</span>
 
   <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="s">&quot;Add</span><span class="nv"> </span><span class="s">user&quot;</span>
-    <span class="nt">inspur.sm.add_user</span><span class="p">:</span>
+    <span class="nt">inspur.sm.user</span><span class="p">:</span>
       <span class="nt">state</span><span class="p">:</span> <span class="s">&quot;present&quot;</span>
       <span class="nt">uname</span><span class="p">:</span> <span class="s">&quot;wbs&quot;</span>
       <span class="nt">upass</span><span class="p">:</span> <span class="s">&quot;admin&quot;</span>
@@ -412,7 +412,7 @@
       <span class="nt">provider</span><span class="p">:</span> <span class="s">&quot;</span><span class="cp">{{</span> <span class="nv">ism</span> <span class="cp">}}</span><span class="s">&quot;</span>
 
   <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="s">&quot;Set</span><span class="nv"> </span><span class="s">user&quot;</span>
-    <span class="nt">inspur.sm.add_user</span><span class="p">:</span>
+    <span class="nt">inspur.sm.user</span><span class="p">:</span>
       <span class="nt">state</span><span class="p">:</span> <span class="s">&quot;present&quot;</span>
       <span class="nt">uname</span><span class="p">:</span> <span class="s">&quot;wbs&quot;</span>
       <span class="nt">upass</span><span class="p">:</span> <span class="s">&quot;12345678&quot;</span>
